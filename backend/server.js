@@ -28,7 +28,7 @@ const app = express();
 
 // CORS Configuration
 app.use(cors({
-    origin: ['http://localhost:5173', 'http://localhost:3000'],
+    origin: ['http://localhost:5173', 'https://samanee-globals-frontends-gamma.vercel.app'],
     methods: "GET, POST, PUT, PATCH, DELETE",
     allowedHeaders: 'Content-Type, Authorization'
 }));
