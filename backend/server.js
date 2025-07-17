@@ -28,7 +28,7 @@ const app = express();
 
 // CORS Configuration
 app.use(cors({
-    origin: ['http://localhost:5173', 'https://samanee-globals-frontends-gamma.vercel.app'],
+    origin: ['https://samanee-globals-cms.vercel.app', 'https://samanee-globals-frontends-gamma.vercel.app'],
     methods: "GET, POST, PUT, PATCH, DELETE",
     allowedHeaders: 'Content-Type, Authorization'
 }));
@@ -52,6 +52,10 @@ app.use('/api', BecameResellerRoute);
 
 // Error handling middleware
 app.use(errorHandler);
+
+app.get("/", (req, res) => {
+    res.send("🚀 Server is working! Welcome to the API.");
+});
 
 // Server
 const PORT = process.env.PORT || 6001;
