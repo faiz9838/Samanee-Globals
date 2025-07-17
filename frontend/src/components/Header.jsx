@@ -63,28 +63,15 @@ export default function ProfessionalNavbar() {
 
                     </Typography>
 
-                    <Box sx={{ display: 'flex', alignItems: 'center', gap: 3, position: 'relative' }}>
-                        <Box sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
-                            <Button
-                                component={Link}
-                                to="/contact"
-                                variant="outlined"
-                                color="inherit"
-                                sx={{
-                                    borderRadius: '1rem',
-                                    borderColor: 'rgba(255, 255, 255, 0.5)',
-                                    textTransform: 'none',
-                                    fontWeight: 500,
-                                    '&:hover': {
-                                        borderColor: 'white',
-                                        backgroundColor: 'rgba(255, 255, 255, 0.1)'
-                                    }
-                                }}
-                            >
-                                Contact Us
-                            </Button>
-                        </Box>
-
+                    <Box
+                        sx={{
+                            display: 'flex',
+                            alignItems: 'center',
+                            gap: 2,
+                            flexDirection: { xs: 'row-reverse', sm: 'row' }, // Stack properly
+                        }}
+                    >
+                        {/* Menu Icon */}
                         <IconButton
                             ref={menuButtonRef}
                             size="large"
@@ -93,9 +80,6 @@ export default function ProfessionalNavbar() {
                             aria-label={open ? "close menu" : "open menu"}
                             onClick={open ? handleMenuClose : handleMenuOpen}
                             sx={{
-                                position: { xs: 'absolute', md: 'relative' },
-                                top: { xs: '16px', md: 'auto' },
-                                right: { xs: '16px', md: 'auto' },
                                 zIndex: 1400,
                                 border: open ? '1px solid rgba(255, 255, 255, 0.3)' : 'none',
                                 borderRadius: '8px',
@@ -105,7 +89,30 @@ export default function ProfessionalNavbar() {
                         >
                             {open ? <CloseIcon /> : <MenuIcon />}
                         </IconButton>
+
+                        {/* Contact Button */}
+                        <Button
+                            component={Link}
+                            to="/contact"
+                            variant="outlined"
+                            color="inherit"
+                            sx={{
+                                borderRadius: '1rem',
+                                borderColor: 'rgba(255, 255, 255, 0.5)',
+                                textTransform: 'none',
+                                fontWeight: 500,
+                                whiteSpace: 'nowrap',
+                                fontSize: { xs: '0.75rem', sm: '0.875rem' },
+                                '&:hover': {
+                                    borderColor: 'white',
+                                    backgroundColor: 'rgba(255, 255, 255, 0.1)'
+                                }
+                            }}
+                        >
+                            Contact Us
+                        </Button>
                     </Box>
+
 
                 </Toolbar>
             </AppBar>
