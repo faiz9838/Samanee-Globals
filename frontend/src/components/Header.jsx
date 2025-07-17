@@ -116,6 +116,7 @@ export default function ProfessionalNavbar() {
                 onClose={handleMenuClose}
                 TransitionComponent={Fade}
                 transitionDuration={300}
+                disablePortal
                 sx={{
                     '& .MuiPaper-root': {
                         width: '100%',
