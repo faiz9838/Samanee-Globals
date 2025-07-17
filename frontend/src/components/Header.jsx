@@ -62,8 +62,8 @@ export default function ProfessionalNavbar() {
 
                     </Typography>
 
-                    <Box sx={{ display: 'flex', alignItems: 'center', gap: 3 }}>
-                        <Box sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
+                    <Box sx={{ display: 'flex', alignItems: 'center', gap: 3, position: 'relative' }}>
+                        <Box sx={{ display: 'flex', alignItems: 'center', gap: 4 }}>
                             <Button
                                 component={Link}
                                 to="/contact"
@@ -92,14 +92,20 @@ export default function ProfessionalNavbar() {
                             aria-label={open ? "close menu" : "open menu"}
                             onClick={open ? handleMenuClose : handleMenuOpen}
                             sx={{
+                                position: { xs: 'absolute', md: 'relative' },
+                                top: { xs: '16px', md: 'auto' },
+                                right: { xs: '16px', md: 'auto' },
+                                zIndex: 1400,
                                 border: open ? '1px solid rgba(255, 255, 255, 0.3)' : 'none',
                                 borderRadius: '8px',
-                                padding: '8px'
+                                padding: '8px',
+                                backgroundColor: open ? 'rgba(255,255,255,0.1)' : 'transparent',
                             }}
                         >
                             {open ? <CloseIcon /> : <MenuIcon />}
                         </IconButton>
                     </Box>
+
                 </Toolbar>
             </AppBar>
 
