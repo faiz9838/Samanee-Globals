@@ -260,7 +260,7 @@ export default function ProfessionalNavbar() {
                         <Box sx={{ display: 'flex', gap: 1 }}>
                             <IconButton
                                 component="a"
-                                href="https://facebook.com"
+                                href="https://facebo00ok.com"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 sx={{
