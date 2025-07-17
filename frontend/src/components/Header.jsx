@@ -68,7 +68,7 @@ export default function ProfessionalNavbar() {
                             display: 'flex',
                             alignItems: 'center',
                             gap: 2,
-                            flexDirection: { xs: 'row-reverse', sm: 'row' }, // Stack properly
+                            flexDirection: { xs: 'row-reverse', sm: 'row-reverse' }, // Stack properly
                         }}
                     >
                         {/* Menu Icon */}
