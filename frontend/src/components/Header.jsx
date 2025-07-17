@@ -51,7 +51,8 @@ export default function ProfessionalNavbar() {
                 sx={{
                     backgroundColor: scrolled || open ? 'rgba(30, 41, 59, 0.98)' : 'rgba(29, 29, 29, 0.35)',
                     transition: 'background-color 0.3s ease',
-                    zIndex: (theme) => theme.zIndex.drawer + 1,
+                    // zIndex: (theme) => theme.zIndex.drawer + 1,
+                    zIndex: 1500,
                     px: { xs: 0, sm: 2, md: 6 },
                     boxShadow: scrolled ? '0 2px 4px rgba(0,0,0,0.1)' : '0 2px 4px rgba(0,0,0,0.1)',
                 }}
@@ -63,7 +64,7 @@ export default function ProfessionalNavbar() {
                     </Typography>
 
                     <Box sx={{ display: 'flex', alignItems: 'center', gap: 3, position: 'relative' }}>
-                        <Box sx={{ display: 'flex', alignItems: 'center', gap: 4 }}>
+                        <Box sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
                             <Button
                                 component={Link}
                                 to="/contact"
