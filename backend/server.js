@@ -25,12 +25,15 @@ const app = express();
 
 
 
-app.set('trust proxy', true); // Important if using sessions or real IP
+// app.set('trust proxy', true); // Important if using sessions or real IP
 
 app.use(cors({
     origin: ['https://samanee-globals-cms.vercel.app', 'https://samanee-globals-frontends-gamma.vercel.app'],
     methods: "GET, POST, PUT, PATCH, DELETE",
-    allowedHeaders: 'Content-Type, Authorization'
+    allowedHeaders: 'Content-Type, Authorization',
+    credentials: true, // Allow cookies to be sent with requests
+    optionsSuccessStatus: 200 // For legacy browser support
+
 }));
 
 
