@@ -26,22 +26,21 @@ const app = express();
 
 
 app.set('trust proxy', true); // Important if using sessions or real IP
+const cors = require('cors');
 
-// CORS Configuration
 const allowedOrigins = [
-    'http://localhost:3000',
-    'http://localhost:5173',
-    'https://samanee-globals-cms.vercel.app',
-    'https://samanee-globals-frontends-gamma.vercel.app',
+    'http://localhost:3000', // CMS local
+    'http://localhost:5173', // Frontend local
+    'https://samanee-globals-cms.vercel.app', // CMS deployed
+    'https://samanee-globals-frontends-gamma.vercel.app' // Frontend deployed
 ];
 
 app.use(cors({
     origin: function (origin, callback) {
-        // Allow requests with no origin (like Postman or curl)
+        // Allow no-origin (like curl, Postman, etc.)
         if (!origin || allowedOrigins.includes(origin)) {
             callback(null, true);
         } else {
-            console.error('❌ CORS blocked for origin:', origin);
             callback(new Error('Not allowed by CORS'));
         }
     },
@@ -49,6 +48,8 @@ app.use(cors({
     methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE'],
     allowedHeaders: ['Content-Type', 'Authorization'],
 }));
+
+
 
 
 // JSON parser middleware

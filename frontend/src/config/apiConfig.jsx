@@ -1,8 +1,14 @@
 import axios from 'axios';
 
+const getBaseUrl = () => {
+    return window.location.hostname === 'localhost'
+        ? 'http://localhost:6001/api'
+        : 'https://samanee-globals-1.onrender.com/api';
+};
+
 const API = axios.create({
-    baseURL: import.meta.env.VITE_API_BASE_URL, // Use only the env value
-    withCredentials: true, // Needed if you're using cookies or sessions
+    baseURL: getBaseUrl(),
+    withCredentials: true, // important if using cookies/session
 });
 
 API.interceptors.request.use((req) => {
