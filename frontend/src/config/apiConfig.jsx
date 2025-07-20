@@ -1,9 +1,15 @@
-// src/api/apiConfig.js
 import axios from 'axios';
 
+const getBaseUrl = () => {
+    const isLocalhost = window.location.hostname === 'localhost';
+    return isLocalhost
+        ? 'http://localhost:6001/api'
+        : import.meta.env.VITE_API_BASE_URL; // From .env in production
+};
+
 const API = axios.create({
-    baseURL: import.meta.env.VITE_API_BASE_URL || 'http://localhost:6001/api',
-    withCredentials: true, // Optional: if you're using cookies/sessions
+    baseURL: getBaseUrl(),
+    withCredentials: true, // Optional if using cookies/sessions
 });
 
 API.interceptors.request.use((req) => {
