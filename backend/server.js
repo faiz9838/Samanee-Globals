@@ -25,8 +25,10 @@ const app = express();
 
 
 
+
+
 app.set('trust proxy', true); // Important if using sessions or real IP
-const cors = require('cors');
+
 
 const allowedOrigins = [
     'http://localhost:3000', // CMS local
