@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { Container, Grid, Card, CardContent, Typography, Box, Skeleton } from "@mui/material";
-import { fetchProductCategories } from "@/api/ProductCategory"; // Adjust the import path as necessary
+import { fetchProductCategories } from "../../../api/ProductCategory"; // Adjust the import path as necessary
 
 const ProductList = () => {
     const [categories, setCategories] = useState([]);

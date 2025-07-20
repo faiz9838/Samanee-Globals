@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import axios from "axios";
+
 import {
     Card,
     CardContent,
@@ -20,6 +20,8 @@ import {
 } from "@mui/material";
 import SearchIcon from "@mui/icons-material/Search";
 import { useTheme } from "@mui/material/styles";
+
+import { fetchProductsByCategory } from "../../api/Products";
 
 const ProductsPage = () => {
     const { categoryId } = useParams();
@@ -41,7 +43,7 @@ const ProductsPage = () => {
         const fetchProducts = async () => {
             try {
                 setLoading(true);
-                const res = await axios.get(`http://localhost:6001/api/products/category/${categoryId}`);
+                const res = await fetchProductsByCategory(categoryId);
 
                 setProducts(res.data);
                 setFilteredProducts(res.data);
@@ -61,6 +63,7 @@ const ProductsPage = () => {
 
         fetchProducts();
     }, [categoryId]);
+
 
     useEffect(() => {
         const filtered = products.filter((product) =>
