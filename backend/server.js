@@ -25,7 +25,7 @@ const app = express();
 
 
 
-// app.set('trust proxy', true); // Important if using sessions or real IP
+app.set('trust proxy', true); // Important if using sessions or real IP
 
 app.use(cors({
     origin: ['https://samanee-globals-cms.vercel.app', 'https://samanee-globals-frontends-gamma.vercel.app'],
