@@ -8,7 +8,7 @@ import {
 
 } from '@mui/material';
 import ProductsPage from './Porducts'; // Fixed typo here
-import axios from 'axios';
+import { fetchProductsByCategory } from '../../api/Products'; // Adjust the import path as necessary
 import WhyChooseUs from '../../components/WhyChooseUs';
 import Testimonials from '../../section/Testimonials/Testimonials';
 
@@ -26,7 +26,8 @@ function ProductView() {
         const fetchProducts = async () => {
             try {
                 setLoading(true);
-                const res = await axios.get(`http://localhost:6001/api/products/category/${categoryId}`);
+                const res = await fetchProductsByCategory(categoryId);
+
                 setProducts(res.data);
                 setFilteredProducts(res.data);
 
