@@ -27,13 +27,31 @@ const app = express();
 
 app.set('trust proxy', true); // Important if using sessions or real IP
 
+
+const allowedOrigins = [
+    'http://localhost:3000',
+    'http://localhost:5173',
+    'https://samanee-globals-cms.vercel.app',
+    'https://samanee-globals-frontends-gamma.vercel.app',
+];
+
 app.use(cors({
-    origin: ['https://samanee-globals-cms.vercel.app', 'https://samanee-globals-frontends-gamma.vercel.app'],
-    methods: "GET, POST, PUT, PATCH, DELETE",
-    allowedHeaders: 'Content-Type, Authorization',
-
-
+    origin: function (origin, callback) {
+        if (!origin || allowedOrigins.includes(origin)) {
+            callback(null, true);
+        } else {
+            callback(new Error('Not allowed by CORS'));
+        }
+    },
+    credentials: true, // ✅ Required to allow cookies/token headers
+    methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE'],
+    allowedHeaders: ['Content-Type', 'Authorization'],
 }));
+
+app.use((req, res, next) => {
+    res.header('Access-Control-Allow-Credentials', 'true');
+    next();
+});
 
 
 // JSON parser middleware
