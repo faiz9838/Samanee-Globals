@@ -5,8 +5,8 @@ import {
     createProduct,
     updateProduct,
     deleteProduct,
-} from '@redux/Products/products.thunk.js';
-import { fetchProductsCategory } from '@redux/Products/productsCategory.thunk.js';
+} from '../../../redux/Products/products.thunk.js';
+import { fetchProductsCategory } from '../../../redux/Products/productsCategory.thunk.js';
 
 import {
     Table, TableBody, TableCell, TableContainer, TableHead, TableRow,

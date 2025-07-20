@@ -6,7 +6,7 @@ import {
     createTestimonial,
     updateTestimonial,
     deleteTestimonial,
-} from "@redux/Testimonials/testimonial.thunk.js";
+} from "../../../redux/Testimonials/testimonial.thunk.js";
 import {
     Table,
     TableBody,

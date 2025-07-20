@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchHero, addHero, updateHero, deleteHero } from '@redux/Hero/hero.thunk';
+import { fetchHero, addHero, updateHero, deleteHero } from '../../../redux/Hero/hero.thunk';
 import {
     Table, TableBody, TableCell, TableContainer, TableHead, TableRow,
     Paper, CircularProgress, Typography, Button, TextField, Box,
@@ -9,9 +9,7 @@ import {
 } from '@mui/material';
 
 import {
-    Add as AddIcon,
-    Edit as EditIcon,
-    Delete as DeleteIcon,
+
     Image as ImageIcon,
     Link as LinkIcon,
     Videocam as VideocamIcon,

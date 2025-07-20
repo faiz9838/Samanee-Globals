@@ -8,7 +8,7 @@ import {
     Alert, InputAdornment
 } from '@mui/material';
 import { Search as SearchIcon } from '@mui/icons-material';
-import { fetchAnnouncements, addAnnouncement, updateAnnouncement, deleteAnnouncement } from '@redux/Announcement/announcement.thunk.js';
+import { fetchAnnouncements, addAnnouncement, updateAnnouncement, deleteAnnouncement } from '../../../redux/Announcement/announcement.thunk.js';
 
 const AnnouncementTable = () => {
     const dispatch = useDispatch();

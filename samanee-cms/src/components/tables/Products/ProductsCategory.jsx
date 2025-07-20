@@ -5,7 +5,7 @@ import {
     addProductsCategory,
     updateProductsCategory,
     deleteProductsCategory,
-} from "@redux/Products/productsCategory.thunk.js";
+} from "../../../redux/Products/productsCategory.thunk.js";
 import {
     Table, TableBody, TableCell, TableContainer, TableHead, TableRow,
     Paper, CircularProgress, Typography, Button, TextField, Box,

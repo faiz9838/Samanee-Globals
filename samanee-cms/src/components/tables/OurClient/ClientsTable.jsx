@@ -5,7 +5,7 @@ import {
     addClient,
     updateClient,
     deleteClient
-} from '@redux/Clients/clients.thunk';
+} from '../../../redux/Clients/clients.thunk';
 
 import {
     Table, TableBody, TableCell, TableContainer, TableHead, TableRow,
