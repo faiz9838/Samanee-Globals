@@ -5,7 +5,7 @@ import HomePage from './pages/HomePages';
 import ContactUsView from './pages/Contact/ContactUsView';
 import ProductView from './pages/Products/ProductsView';
 import Featured from './pages/Featured/Featured';
-import BecomeReseller from './pages/BecameSeller/BecameSeller';
+import BecomeResellerview from './pages/BecameSeller/BecameResellerView';
 
 
 function App() {
@@ -18,8 +18,8 @@ function App() {
         <Route path="/home/contact-us" element={<ContactUsView />} /> {/* ✅ Fixed */}
         <Route path="/contact" element={<ContactUsView />} /> {/* ✅ Fixed */}
         <Route path="*" element={<h1>Page Not Found</h1>} />
-        <Route path="/seller" element={<BecomeReseller />} /> {/* ✅ Fixed */}
-        <Route path="/others/became-seller" element={<BecomeReseller />} /> {/* ✅ Fixed */}
+        <Route path="/seller" element={<BecomeResellerview />} /> {/* ✅ Fixed */}
+        <Route path="/others/became-seller" element={<BecomeResellerview />} /> {/* ✅ Fixed */}
       </Routes>
     </Layout>
   );

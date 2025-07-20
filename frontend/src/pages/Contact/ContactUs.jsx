@@ -131,11 +131,11 @@ function ContactUs() {
                     <Box sx={{ display: 'flex', flexDirection: 'column', gap: 4 }}>
                         <Box sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
                             <PhoneIcon sx={{ color: 'rgba(255, 255, 255, 0.7)' }} />
-                            <Typography variant="h6">+91 98201 92970</Typography>
+                            <Typography variant="h6">+91 98201 xyz</Typography>
                         </Box>
                         <Box sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
                             <EmailIcon sx={{ color: 'rgba(255, 255, 255, 0.7)' }} />
-                            <Typography variant="h6">info@tathastu.global</Typography>
+                            <Typography variant="h6">info@samanee.global</Typography>
                         </Box>
                     </Box>
 

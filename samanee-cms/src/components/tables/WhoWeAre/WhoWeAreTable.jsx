@@ -5,7 +5,9 @@ import {
     createWhoWeAre,
     updateWhoWeAre,
     deleteWhoWeAre,
-} from '../../../redux/WhoWeAre/whoWeAre.thunk.js';
+
+} from '../../../redux/WhoWeAre/WhoWeAre.thunk.js';
+
 
 import {
     Container, Typography, Card, CardHeader, CardContent, TextField, Button, Grid,

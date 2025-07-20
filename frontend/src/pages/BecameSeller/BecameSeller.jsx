@@ -21,6 +21,7 @@ import {
     CheckCircle as CheckCircleIcon,
 } from "@mui/icons-material";
 
+
 function BecomeReseller() {
     const [formData, setFormData] = useState({
         name: "",
@@ -91,16 +92,14 @@ function BecomeReseller() {
     return (
         <Box
             sx={{
-                minHeight: "100vh",
+                minHeight: "auto",
                 backgroundColor: "#0f172a",
 
                 py: { xs: 4, md: 12 },
                 color: "#fff",
 
-                display: "flex",
-                flexDirection: "row",
-                justifyContent: "center",
-                alignItems: "center"
+
+
             }}
         >
             <Grid container spacing={0} sx={{
@@ -109,6 +108,7 @@ function BecomeReseller() {
                 gap: 4,
                 justifyContent: "center",
                 alignItems: "flex-start",
+
             }}  >
                 {/* Left Info Section */}
                 <Grid item xs={12} md={6}
@@ -244,6 +244,8 @@ function BecomeReseller() {
                     </Paper>
                 </Grid>
             </Grid>
+
+
 
             <Snackbar
                 open={snackbar.open}
